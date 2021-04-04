@@ -1,20 +1,25 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import csv
-x = 400
-x2 = 300
-x3 = 100
-x4 = 300
 
-def AMFilter(olist, nlist, start_index, x):
-    sum = 0
-    for ii in range(x):
-        sum = sum + olist[start_index+ii]
-    nlist.append(sum/x)
-    #print("nlist = "+ str(nlist[-1]))
-#AMFilter(list,nlist, 1, x)
+A1 = 0.997
+A2 = 0.99
+A3 = 0.9
+A4 = 0.9985
 
-def fft(t, data, nt, ndata, dt, x):
+B1 = 0.003
+B2 = 0.01
+B3 = 0.1
+B4 = 0.0015
+#fnew = 0
+def IIRFilter(olist, nlist, start_index, A, B):
+    
+    new = olist[start_index - ii]
+
+    new = A*new + B*olist[start_index]
+    nlist.append(new)
+
+def fft(t, data, nt, ndata, dt, A, B):
 
     #dt = 1.0/10000.0 # 10kHz
     #t = np.arange(0.0, 1.0, dt) # 10s
@@ -47,10 +52,7 @@ def fft(t, data, nt, ndata, dt, x):
     nY = nY[range(int(nn/2))]
 
     fig, (ax1, ax2) = plt.subplots(2, 1)
-    ax1.set_title(str(x) + ' Data Points Averaged')
-    #ax1.plot(t,y,'b')
-    #ax1.set_xlabel('Time')
-    #ax1.set_ylabel('Amplitude')
+    ax1.set_title('A = ' + str(A) + ', ' + 'B = ' + str(B))
     ax1.plot(t, data, 'black')
     ax1.plot(nt, ndata, 'red') #filtered
     ax1.set_xlabel('Time [s]')
@@ -79,12 +81,13 @@ with open('D:/Northwestern/ME433/MECH_ENG_433_Yen/HW2/sigA.csv') as f:
         data1.append(float(row[1])) # second column
 dt1 = len(t1)/t1[-1]
 ndata1 = []
-for ii in range(len(data1)-x):
-    AMFilter(data1, ndata1, ii, x)
+new = data1[0]
+for ii in range(1,len(data1)):
+    new = A1*new + B1*data1[ii]
+    ndata1.append(new)
 print("Sample rate 1: " + str(dt1))
-nt1 = t1[0:-x]
-fft(t1, data1, nt1, ndata1, dt1, x)
-#fft(nt1, ndata1, dt1)
+nt1 = t1[1:]
+fft(t1, data1, nt1, ndata1, dt1, A1, B1)
 
 with open('D:/Northwestern/ME433/MECH_ENG_433_Yen/HW2/sigB.csv') as f:
     # open the csv file
@@ -95,11 +98,13 @@ with open('D:/Northwestern/ME433/MECH_ENG_433_Yen/HW2/sigB.csv') as f:
         data2.append(float(row[1])) # second column
 dt2 = len(t2)/t2[-1]
 ndata2 = []
-for ii in range(len(data2)-x2):
-    AMFilter(data2, ndata2, ii, x2)
+new = data2[0]
+for ii in range(1, len(data2)):
+    new = A2*new + B2*data2[ii]
+    ndata2.append(new)
 print("Sample rate 2: " + str(dt2))
-nt2 = t2[0:-x2]
-fft(t2, data2, nt2, ndata2, dt2, x2)
+nt2 = t2[1:]
+fft(t2, data2, nt2, ndata2, dt2, A2, B2)
 
 with open('D:/Northwestern/ME433/MECH_ENG_433_Yen/HW2/sigC.csv') as f:
     # open the csv file
@@ -110,11 +115,13 @@ with open('D:/Northwestern/ME433/MECH_ENG_433_Yen/HW2/sigC.csv') as f:
         data3.append(float(row[1])) # second column
 dt3 = len(t3)/t3[-1]
 ndata3 = []
-for ii in range(len(data3)-x3):
-    AMFilter(data3, ndata3, ii, x3)
+new = data3[0]
+for ii in range(1, len(data3)):
+    new = A3*new + B3*data3[ii]
+    ndata3.append(new)
 print("Sample rate 3: " + str(dt3))
-nt3 = t3[0:-x3]
-fft(t3, data3, nt3, ndata3, dt3, x3)
+nt3 = t3[1:]
+fft(t3, data3, nt3, ndata3, dt3, A3, B3)
 
 with open('D:/Northwestern/ME433/MECH_ENG_433_Yen/HW2/sigD.csv') as f:
     # open the csv file
@@ -125,10 +132,12 @@ with open('D:/Northwestern/ME433/MECH_ENG_433_Yen/HW2/sigD.csv') as f:
         data4.append(float(row[1])) # second column
 dt4 = len(t4)/t4[-1]
 ndata4 = []
-for ii in range(len(data4)-x4):
-    AMFilter(data4, ndata4, ii, x4)
+new = data4[0]
+for ii in range(1, len(data4)):
+    new = A4*new + B4*data4[ii]
+    ndata4.append(new)
 print("Sample rate 4: " + str(dt4))
-nt4 = t4[0:-x4]
-fft(t4, data4, nt4, ndata4, dt4, x4)
+nt4 = t4[1:]
+fft(t4, data4, nt4, ndata4, dt4, A4, B4)
 
 plt.show()
