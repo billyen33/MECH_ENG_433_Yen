@@ -12,10 +12,10 @@
 #pragma config CP = OFF // disable code protect
 
 // DEVCFG1
-#pragma config FNOSC = FRCPLL // use primary oscillator with pll
+#pragma config FNOSC = FRCPLL // use internal oscillator with pll
 #pragma config FSOSCEN = OFF // disable secondary oscillator
 #pragma config IESO = OFF // disable switching clocks
-#pragma config POSCMOD = OFF // high speed crystal mode
+#pragma config POSCMOD = OFF // RC mode
 #pragma config OSCIOFNC = OFF // disable clock output
 #pragma config FPBDIV = DIV_1 // divide sysclk freq by 1 for peripheral bus clock
 #pragma config FCKSM = CSDCMD // disable clock switch and FSCM
