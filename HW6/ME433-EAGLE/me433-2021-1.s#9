@@ -20951,6 +20951,11 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <part name="J5" library="ME433" deviceset="CONN_08" device="&quot;"/>
 <part name="J6" library="ME433" deviceset="CONN_08" device="&quot;"/>
 <part name="J7" library="ME433" deviceset="CONN_08" device="&quot;"/>
+<part name="J8" library="ME433" deviceset="CONN_08" device="&quot;"/>
+<part name="J9" library="ME433" deviceset="CONN_08" device="&quot;"/>
+<part name="J10" library="ME433" deviceset="CONN_08" device="&quot;"/>
+<part name="J11" library="ME433" deviceset="CONN_08" device="&quot;"/>
+<part name="J12" library="ME433" deviceset="CONN_08" device="&quot;"/>
 </parts>
 <sheets>
 <sheet>
@@ -21268,6 +21273,26 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <instance part="J7" gate="G$1" x="48.26" y="-124.46" smashed="yes">
 <attribute name="VALUE" x="43.18" y="-136.906" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="43.18" y="-111.252" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="J8" gate="G$1" x="60.96" y="-124.46" smashed="yes">
+<attribute name="VALUE" x="55.88" y="-136.906" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="55.88" y="-111.252" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="J9" gate="G$1" x="73.66" y="-124.46" smashed="yes">
+<attribute name="VALUE" x="68.58" y="-136.906" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="68.58" y="-111.252" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="J10" gate="G$1" x="86.36" y="-124.46" smashed="yes">
+<attribute name="VALUE" x="81.28" y="-136.906" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="81.28" y="-111.252" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="J11" gate="G$1" x="99.06" y="-124.46" smashed="yes">
+<attribute name="VALUE" x="93.98" y="-136.906" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="93.98" y="-111.252" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="J12" gate="G$1" x="111.76" y="-124.46" smashed="yes">
+<attribute name="VALUE" x="106.68" y="-136.906" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="106.68" y="-111.252" size="1.778" layer="95" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -22168,6 +22193,134 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="J7" gate="G$1" pin="1"/>
 <wire x1="40.64" y1="-132.08" x2="53.34" y2="-132.08" width="0.1524" layer="91"/>
 <junction x="40.64" y="-132.08"/>
+</segment>
+</net>
+<net name="N$30" class="0">
+<segment>
+<pinref part="J8" gate="G$1" pin="8"/>
+<pinref part="J9" gate="G$1" pin="8"/>
+<wire x1="66.04" y1="-114.3" x2="78.74" y2="-114.3" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="8"/>
+<wire x1="78.74" y1="-114.3" x2="91.44" y2="-114.3" width="0.1524" layer="91"/>
+<junction x="78.74" y="-114.3"/>
+<pinref part="J11" gate="G$1" pin="8"/>
+<wire x1="91.44" y1="-114.3" x2="104.14" y2="-114.3" width="0.1524" layer="91"/>
+<junction x="91.44" y="-114.3"/>
+<pinref part="J12" gate="G$1" pin="8"/>
+<wire x1="104.14" y1="-114.3" x2="116.84" y2="-114.3" width="0.1524" layer="91"/>
+<junction x="104.14" y="-114.3"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
+<pinref part="J8" gate="G$1" pin="7"/>
+<pinref part="J9" gate="G$1" pin="7"/>
+<wire x1="66.04" y1="-116.84" x2="78.74" y2="-116.84" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="7"/>
+<wire x1="78.74" y1="-116.84" x2="91.44" y2="-116.84" width="0.1524" layer="91"/>
+<junction x="78.74" y="-116.84"/>
+<pinref part="J11" gate="G$1" pin="7"/>
+<wire x1="91.44" y1="-116.84" x2="104.14" y2="-116.84" width="0.1524" layer="91"/>
+<junction x="91.44" y="-116.84"/>
+<pinref part="J12" gate="G$1" pin="7"/>
+<wire x1="104.14" y1="-116.84" x2="116.84" y2="-116.84" width="0.1524" layer="91"/>
+<junction x="104.14" y="-116.84"/>
+</segment>
+</net>
+<net name="N$32" class="0">
+<segment>
+<pinref part="J8" gate="G$1" pin="6"/>
+<pinref part="J9" gate="G$1" pin="6"/>
+<wire x1="66.04" y1="-119.38" x2="78.74" y2="-119.38" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="6"/>
+<wire x1="78.74" y1="-119.38" x2="91.44" y2="-119.38" width="0.1524" layer="91"/>
+<junction x="78.74" y="-119.38"/>
+<pinref part="J11" gate="G$1" pin="6"/>
+<wire x1="91.44" y1="-119.38" x2="104.14" y2="-119.38" width="0.1524" layer="91"/>
+<junction x="91.44" y="-119.38"/>
+<pinref part="J12" gate="G$1" pin="6"/>
+<wire x1="104.14" y1="-119.38" x2="116.84" y2="-119.38" width="0.1524" layer="91"/>
+<junction x="104.14" y="-119.38"/>
+</segment>
+</net>
+<net name="N$33" class="0">
+<segment>
+<pinref part="J8" gate="G$1" pin="5"/>
+<pinref part="J9" gate="G$1" pin="5"/>
+<wire x1="66.04" y1="-121.92" x2="78.74" y2="-121.92" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="5"/>
+<wire x1="78.74" y1="-121.92" x2="91.44" y2="-121.92" width="0.1524" layer="91"/>
+<junction x="78.74" y="-121.92"/>
+<pinref part="J11" gate="G$1" pin="5"/>
+<wire x1="91.44" y1="-121.92" x2="104.14" y2="-121.92" width="0.1524" layer="91"/>
+<junction x="91.44" y="-121.92"/>
+<pinref part="J12" gate="G$1" pin="5"/>
+<wire x1="104.14" y1="-121.92" x2="116.84" y2="-121.92" width="0.1524" layer="91"/>
+<junction x="104.14" y="-121.92"/>
+</segment>
+</net>
+<net name="N$34" class="0">
+<segment>
+<pinref part="J8" gate="G$1" pin="4"/>
+<pinref part="J9" gate="G$1" pin="4"/>
+<wire x1="66.04" y1="-124.46" x2="78.74" y2="-124.46" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="4"/>
+<wire x1="78.74" y1="-124.46" x2="91.44" y2="-124.46" width="0.1524" layer="91"/>
+<junction x="78.74" y="-124.46"/>
+<pinref part="J11" gate="G$1" pin="4"/>
+<wire x1="91.44" y1="-124.46" x2="104.14" y2="-124.46" width="0.1524" layer="91"/>
+<junction x="91.44" y="-124.46"/>
+<pinref part="J12" gate="G$1" pin="4"/>
+<wire x1="104.14" y1="-124.46" x2="116.84" y2="-124.46" width="0.1524" layer="91"/>
+<junction x="104.14" y="-124.46"/>
+</segment>
+</net>
+<net name="N$35" class="0">
+<segment>
+<pinref part="J8" gate="G$1" pin="3"/>
+<pinref part="J9" gate="G$1" pin="3"/>
+<wire x1="66.04" y1="-127" x2="78.74" y2="-127" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="3"/>
+<wire x1="78.74" y1="-127" x2="91.44" y2="-127" width="0.1524" layer="91"/>
+<junction x="78.74" y="-127"/>
+<pinref part="J11" gate="G$1" pin="3"/>
+<wire x1="91.44" y1="-127" x2="104.14" y2="-127" width="0.1524" layer="91"/>
+<junction x="91.44" y="-127"/>
+<pinref part="J12" gate="G$1" pin="3"/>
+<wire x1="104.14" y1="-127" x2="116.84" y2="-127" width="0.1524" layer="91"/>
+<junction x="104.14" y="-127"/>
+</segment>
+</net>
+<net name="N$36" class="0">
+<segment>
+<pinref part="J8" gate="G$1" pin="2"/>
+<pinref part="J9" gate="G$1" pin="2"/>
+<wire x1="66.04" y1="-129.54" x2="78.74" y2="-129.54" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="2"/>
+<wire x1="78.74" y1="-129.54" x2="91.44" y2="-129.54" width="0.1524" layer="91"/>
+<junction x="78.74" y="-129.54"/>
+<pinref part="J11" gate="G$1" pin="2"/>
+<wire x1="91.44" y1="-129.54" x2="104.14" y2="-129.54" width="0.1524" layer="91"/>
+<junction x="91.44" y="-129.54"/>
+<pinref part="J12" gate="G$1" pin="2"/>
+<wire x1="104.14" y1="-129.54" x2="116.84" y2="-129.54" width="0.1524" layer="91"/>
+<junction x="104.14" y="-129.54"/>
+</segment>
+</net>
+<net name="N$37" class="0">
+<segment>
+<pinref part="J8" gate="G$1" pin="1"/>
+<pinref part="J9" gate="G$1" pin="1"/>
+<wire x1="66.04" y1="-132.08" x2="78.74" y2="-132.08" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="1"/>
+<wire x1="78.74" y1="-132.08" x2="91.44" y2="-132.08" width="0.1524" layer="91"/>
+<junction x="78.74" y="-132.08"/>
+<pinref part="J11" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="-132.08" x2="104.14" y2="-132.08" width="0.1524" layer="91"/>
+<junction x="91.44" y="-132.08"/>
+<pinref part="J12" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="-132.08" x2="116.84" y2="-132.08" width="0.1524" layer="91"/>
+<junction x="104.14" y="-132.08"/>
 </segment>
 </net>
 </nets>

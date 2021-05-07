@@ -20911,6 +20911,8 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <part name="GND15" library="ME433" deviceset="GND" device=""/>
 <part name="GND21" library="ME433" deviceset="GND" device=""/>
 <part name="P+5" library="ME433" deviceset="V+" device=""/>
+<part name="B8" library="ME433" deviceset="CONN_01" device=""/>
+<part name="B9" library="ME433" deviceset="CONN_01" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21273,6 +21275,14 @@ This footprint was designed to help hold the alignment of a through-hole compone
 </instance>
 <instance part="P+5" gate="1" x="-33.02" y="96.52" smashed="yes">
 <attribute name="VALUE" x="-30.48" y="99.06" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="B8" gate="G$1" x="78.74" y="48.26" smashed="yes">
+<attribute name="VALUE" x="76.2" y="43.434" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="73.66" y="48.768" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="B9" gate="G$1" x="78.74" y="43.18" smashed="yes">
+<attribute name="VALUE" x="76.2" y="38.354" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="73.66" y="43.688" size="1.778" layer="95" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -21694,6 +21704,13 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="U$7" gate="G$1" pin="5.RES"/>
 <wire x1="101.6" y1="45.72" x2="91.44" y2="45.72" width="0.1524" layer="91"/>
 <label x="91.44" y="45.72" size="1.778" layer="95"/>
+<pinref part="B9" gate="G$1" pin="1"/>
+<wire x1="86.36" y1="43.18" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="43.18" x2="91.44" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="B8" gate="G$1" pin="1"/>
+<wire x1="86.36" y1="48.26" x2="91.44" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="48.26" x2="91.44" y2="45.72" width="0.1524" layer="91"/>
+<junction x="91.44" y="45.72"/>
 </segment>
 </net>
 <net name="B13" class="0">

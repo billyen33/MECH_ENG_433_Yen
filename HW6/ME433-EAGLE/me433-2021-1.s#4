@@ -20816,7 +20816,6 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <part name="P+1" library="ME433" deviceset="+5V" device=""/>
 <part name="BAT" library="ME433" deviceset="CONN_02" device=""/>
 <part name="GND2" library="ME433" deviceset="GND" device=""/>
-<part name="P+2" library="ME433" deviceset="+5V" device=""/>
 <part name="U$2" library="ME433" deviceset="SLIDE" device=""/>
 <part name="U$3" library="ME433" deviceset="POLOLU3V3" device=""/>
 <part name="P+3" library="ME433" deviceset="V+" device=""/>
@@ -20911,6 +20910,7 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <part name="+3V12" library="ME433" deviceset="+3V3" device=""/>
 <part name="GND15" library="ME433" deviceset="GND" device=""/>
 <part name="GND21" library="ME433" deviceset="GND" device=""/>
+<part name="P+5" library="ME433" deviceset="V+" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -20945,9 +20945,6 @@ This footprint was designed to help hold the alignment of a through-hole compone
 </instance>
 <instance part="GND2" gate="1" x="-33.02" y="83.82" smashed="yes">
 <attribute name="VALUE" x="-35.56" y="81.28" size="1.778" layer="96"/>
-</instance>
-<instance part="P+2" gate="1" x="-33.02" y="91.44" smashed="yes">
-<attribute name="VALUE" x="-35.56" y="86.36" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="U$2" gate="G$1" x="15.24" y="73.66" smashed="yes">
 <attribute name="NAME" x="7.62" y="99.06" size="1.27" layer="94"/>
@@ -21274,6 +21271,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <instance part="GND21" gate="1" x="35.56" y="-172.72" smashed="yes">
 <attribute name="VALUE" x="33.02" y="-175.26" size="1.778" layer="96"/>
 </instance>
+<instance part="P+5" gate="1" x="-33.02" y="96.52" smashed="yes">
+<attribute name="VALUE" x="-30.48" y="99.06" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -21283,11 +21283,6 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="P+1" gate="1" pin="+5V"/>
 <pinref part="U$1" gate="G$1" pin="1.VBUS"/>
 <wire x1="-40.64" y1="71.12" x2="-33.02" y2="71.12" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+2" gate="1" pin="+5V"/>
-<pinref part="BAT" gate="G$1" pin="1"/>
-<wire x1="-33.02" y1="88.9" x2="-30.48" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+4" gate="1" pin="+5V"/>
@@ -21473,6 +21468,12 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <wire x1="17.78" y1="76.2" x2="17.78" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="1" pin="V+"/>
 <wire x1="17.78" y1="68.58" x2="22.86" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="BAT" gate="G$1" pin="1"/>
+<wire x1="-33.02" y1="88.9" x2="-30.48" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="P+5" gate="1" pin="V+"/>
+<wire x1="-33.02" y1="93.98" x2="-33.02" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VIN" class="0">

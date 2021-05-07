@@ -21672,11 +21672,6 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <junction x="-81.28" y="-17.78"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="1.MCLR"/>
-<wire x1="10.16" y1="-15.24" x2="0" y2="-15.24" width="0.1524" layer="91"/>
-<label x="0" y="-15.24" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="147.32" y1="10.16" x2="124.46" y2="10.16" width="0.1524" layer="91"/>
 <label x="124.46" y="10.16" size="1.778" layer="95"/>
 <pinref part="R6" gate="G$1" pin="1"/>
@@ -22407,6 +22402,13 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="J12" gate="G$1" pin="1"/>
 <wire x1="104.14" y1="-132.08" x2="116.84" y2="-132.08" width="0.1524" layer="91"/>
 <junction x="104.14" y="-132.08"/>
+</segment>
+</net>
+<net name="MCLR" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="1.MCLR"/>
+<wire x1="10.16" y1="-15.24" x2="0" y2="-15.24" width="0.1524" layer="91"/>
+<label x="0" y="-15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

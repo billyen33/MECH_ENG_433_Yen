@@ -20966,8 +20966,8 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <instance part="GND3" gate="1" x="30.81633125" y="55.90993125" smashed="yes" rot="R270">
 <attribute name="VALUE" x="28.27633125" y="58.44993125" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="+3V1" gate="G$1" x="38.1" y="63.5" smashed="yes">
-<attribute name="VALUE" x="40.64" y="63.5" size="1.778" layer="96" rot="R90"/>
+<instance part="+3V1" gate="G$1" x="35.56" y="63.5" smashed="yes">
+<attribute name="VALUE" x="38.1" y="63.5" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="LED1" gate="G$1" x="15.24" y="48.26" smashed="yes">
 <attribute name="NAME" x="18.796" y="43.688" size="1.778" layer="95" rot="R90"/>
@@ -21523,7 +21523,7 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <segment>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
 <pinref part="U$3" gate="G$1" pin="1.VOUT"/>
-<wire x1="38.1" y1="60.96" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="60.96" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
