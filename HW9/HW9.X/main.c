@@ -37,7 +37,6 @@
 #pragma config IOL1WAY = OFF // allow multiple reconfigurations
 
 void initSPI();
-unsigned char spi_io(unsigned char o);
 void writeUART1(const char * string);
 
 char m[100];
